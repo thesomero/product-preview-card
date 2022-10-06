@@ -1,0 +1,134 @@
+body {
+    font-family: "Montserrat", sans-serif;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: hsl(30, 38%, 92%);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.card {
+    border-radius: 10px;
+    display: flex;
+    max-width: 630px;
+    background-color: white;
+    margin: 0 1rem;
+    overflow: hidden;
+}
+
+.img_container {
+    flex: 1;
+    background: url("./images/image-product-desktop.jpg") center no-repeat;
+    background-size: cover;
+    padding: 25px;
+}
+
+.details_container {
+    flex: 1;
+    padding: 25px;
+    font-size: 14px;
+    color: hsl(212, 21%, 14%);
+}
+
+.details_container .tag {
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-weight: 500;
+    font-size: 9px;
+    color: hsl(212, 21%, 14%);
+
+}
+
+.details_container .description {
+    margin: 15px 0;
+    font-weight: 500;
+    line-height: 1.6em;
+    font-size: 14px;
+}
+
+.details_container .name {
+    color: hsl(212, 21%, 14%);
+    font-weight: 700;
+    font-size: 30px;
+    font-family: 'Fraunces', sans-serif;
+    line-height: 1em;
+    margin: 15px 0;
+}
+
+
+button {
+    background-color: hsl(158, 36%, 37%);
+    width: 100%;
+    padding: 12px;
+    font-size: 14px;
+    display: flex-end;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    border-radius: 6px;
+    color: white;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color .3s ease;
+}
+
+button:hover {
+    background-color: hsl(161, 94%, 13%);
+}
+
+.btn_img {
+    margin-right: 10px;
+    fill: red;
+}
+
+.price_container {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 25px;
+}
+
+.current_price {
+    color: hsl(158, 36%, 37%);
+    font-weight: 700;
+    font-family: 'Fraunces', sans-serif;
+    font-size: 25px;
+}
+
+.old_price {
+    margin: 0 15px;
+    padding: 0;
+    text-decoration: line-through;
+    font-size: 14px;
+}
+
+@media screen and (max-width: 375px) {
+    .img_container {
+        background: url("./images/image-product-mobile.jpg") center no-repeat;
+        min-height: 250px;
+        background-size: cover;
+    }
+
+    .card {
+        flex-direction: column;
+    }
+
+    .details_container {
+        padding: 20px;
+    }
+
+    .details_container .name {
+        font-size: 1.75rem;
+    }
+}
+
+button {
+    cursor: pointer;
+    transition: background-color .3s ease;
+}
